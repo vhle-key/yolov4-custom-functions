@@ -29,6 +29,8 @@ def representative_data_gen():
 
 def save_tflite():
   converter = tf.lite.TFLiteConverter.from_saved_model(FLAGS.weights)
+  converter.allow_custom_ops = True # For all versions to deal with custom layers in the model
+  # converter._enable_tflite_resource_variables = True  # Uncomment this for tf2.5, 2.6 to deal with mutable resources
 
   if FLAGS.quantize_mode == 'float16':
     converter.optimizations = [tf.lite.Optimize.DEFAULT]
