@@ -1,0 +1,116 @@
+(venv) C:\Users\newit\PycharmProjects\yolov4-custom-functions>python convert_tflite.py --weights ./checkpoints/custom-416
+2021-05-14 14:39:09.222705: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'cudart64_101.dll'; dlerror: cudart64_1
+01.dll not found
+2021-05-14 14:39:09.222880: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-05-14 14:39:11.136148: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library nvcuda.dll
+2021-05-14 14:39:12.443584: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties:
+pciBusID: 0000:01:00.0 name: NVIDIA GeForce GTX 1650 Ti computeCapability: 7.5
+coreClock: 1.485GHz coreCount: 16 deviceMemorySize: 4.00GiB deviceMemoryBandwidth: 178.84GiB/s
+2021-05-14 14:39:12.445014: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'cudart64_101.dll'; dlerror: cudart64_1
+01.dll not found
+2021-05-14 14:39:12.445978: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'cublas64_10.dll'; dlerror: cublas64_10
+.dll not found
+2021-05-14 14:39:12.449910: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cufft64_10.dll
+2021-05-14 14:39:12.451830: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library curand64_10.dll
+2021-05-14 14:39:12.507781: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusolver64_10.dll
+2021-05-14 14:39:12.508983: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'cusparse64_10.dll'; dlerror: cusparse6
+4_10.dll not found
+2021-05-14 14:39:12.509858: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'cudnn64_7.dll'; dlerror: cudnn64_7.dll
+ not found
+2021-05-14 14:39:12.509962: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1753] Cannot dlopen some GPU libraries. Please make sure the missing libraries ment
+ioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the requ
+ired libraries for your platform.
+Skipping registering GPU devices...
+2021-05-14 14:39:12.511378: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneD
+NN)to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-05-14 14:39:12.523498: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x19c3bb9d860 initialized for platform Host (this does not guarantee tha
+t XLA will be used). Devices:
+2021-05-14 14:39:12.523611: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-05-14 14:39:12.523998: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-14 14:39:12.524140: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]
+2021-05-14 14:39:24.701597: I tensorflow/core/grappler/devices.cc:69] Number of eligible GPUs (core count >= 8, compute capability >= 0.0): 1
+2021-05-14 14:39:24.702057: I tensorflow/core/grappler/clusters/single_machine.cc:356] Starting new session
+2021-05-14 14:39:24.704682: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties:
+pciBusID: 0000:01:00.0 name: NVIDIA GeForce GTX 1650 Ti computeCapability: 7.5
+coreClock: 1.485GHz coreCount: 16 deviceMemorySize: 4.00GiB deviceMemoryBandwidth: 178.84GiB/s
+2021-05-14 14:39:24.706692: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'cudart64_101.dll'; dlerror: cudart64_1
+01.dll not found
+2021-05-14 14:39:24.708010: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'cublas64_10.dll'; dlerror: cublas64_10
+.dll not found
+2021-05-14 14:39:24.708170: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cufft64_10.dll
+2021-05-14 14:39:24.708571: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library curand64_10.dll
+2021-05-14 14:39:24.709067: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library cusolver64_10.dll
+2021-05-14 14:39:24.710587: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'cusparse64_10.dll'; dlerror: cusparse6
+4_10.dll not found
+2021-05-14 14:39:24.712205: W tensorflow/stream_executor/platform/default/dso_loader.cc:59] Could not load dynamic library 'cudnn64_7.dll'; dlerror: cudnn64_7.dll
+ not found
+2021-05-14 14:39:24.712424: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1753] Cannot dlopen some GPU libraries. Please make sure the missing libraries ment
+ioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the requ
+ired libraries for your platform.
+Skipping registering GPU devices...
+2021-05-14 14:39:25.269430: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1257] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-14 14:39:25.269639: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1263]      0
+2021-05-14 14:39:25.269944: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1276] 0:   N
+2021-05-14 14:39:25.271741: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x19c52f40f70 initialized for platform CUDA (this does not guarantee tha
+t XLA will be used). Devices:
+2021-05-14 14:39:25.271987: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): NVIDIA GeForce GTX 1650 Ti, Compute Capability 7.5
+2021-05-14 14:39:25.401847: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:816] Optimization results for grappler item: graph_to_optimize
+2021-05-14 14:39:25.402010: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: Graph size after: 714 nodes (609), 1081 edges (976)
+, time = 23.176ms.
+2021-05-14 14:39:25.402236: I tensorflow/core/grappler/optimizers/meta_optimizer.cc:818]   function_optimizer: function_optimizer did nothing. time = 0.623ms.
+Traceback (most recent call last):
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\python\framework\importer.py", line 496, in _import_graph_def_int
+ernal
+    results = c_api.TF_GraphImportGraphDefWithResults(
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Input 0 of node StatefulPartitionedCall/model/batch_normalization/AssignNewValue was passed float fr
+om Func/StatefulPartitionedCall/input/_4:0 incompatible with expected resource.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "convert_tflite.py", line 78, in <module>
+    app.run(main)
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\absl\app.py", line 303, in run
+    _run_main(main, args)
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\absl\app.py", line 251, in _run_main
+    sys.exit(main(argv))
+  File "convert_tflite.py", line 73, in main
+    save_tflite()
+  File "convert_tflite.py", line 47, in save_tflite
+    tflite_model = converter.convert()
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\lite\python\lite.py", line 1076, in convert
+    return super(TFLiteConverterV2, self).convert()
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\lite\python\lite.py", line 877, in convert
+    _convert_to_constants.convert_variables_to_constants_v2_as_graph(
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\python\framework\convert_to_constants.py", line 1108, in convert_
+variables_to_constants_v2_as_graph
+    frozen_func = _construct_concrete_function(func, output_graph_def,
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\python\framework\convert_to_constants.py", line 999, in _construc
+t_concrete_function
+    new_func = wrap_function.function_from_graph_def(output_graph_def,
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\python\eager\wrap_function.py", line 650, in function_from_graph_
+def
+    wrapped_import = wrap_function(_imports_graph_def, [])
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\python\eager\wrap_function.py", line 621, in wrap_function
+    func_graph.func_graph_from_py_func(
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\python\framework\func_graph.py", line 986, in func_graph_from_py_
+func
+    func_outputs = python_func(*func_args, **func_kwargs)
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\python\eager\wrap_function.py", line 87, in __call__
+    return self.call_with_variable_creator_scope(self._fn)(*args, **kwargs)
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\python\eager\wrap_function.py", line 93, in wrapped
+    return fn(*args, **kwargs)
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\python\eager\wrap_function.py", line 648, in _imports_graph_def
+    importer.import_graph_def(graph_def, name="")
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\python\util\deprecation.py", line 507, in new_func
+    return func(*args, **kwargs)
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\python\framework\importer.py", line 400, in import_graph_def
+    return _import_graph_def_internal(
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\python\framework\importer.py", line 501, in _import_graph_def_int
+ernal
+    raise ValueError(str(e))
+ValueError: Input 0 of node StatefulPartitionedCall/model/batch_normalization/AssignNewValue was passed float from Func/StatefulPartitionedCall/input/_4:0 incompa
+tible with expected resource.
+
+(venv) C:\Users\newit\PycharmProjects\yolov4-custom-functions>

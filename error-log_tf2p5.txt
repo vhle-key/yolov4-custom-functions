@@ -1,0 +1,72 @@
+(venv) C:\Users\newit\PycharmProjects\yolov4-custom-functions>python convert_tflite.py --weights ./checkpoints/custom-416
+2021-05-14 14:56:38.494659: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll
+2021-05-14 14:56:40.947358: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library nvcuda.dll
+2021-05-14 14:56:42.339074: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties:
+pciBusID: 0000:01:00.0 name: NVIDIA GeForce GTX 1650 Ti computeCapability: 7.5
+coreClock: 1.485GHz coreCount: 16 deviceMemorySize: 4.00GiB deviceMemoryBandwidth: 178.84GiB/s
+2021-05-14 14:56:42.339337: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudart64_110.dll
+2021-05-14 14:56:42.417853: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublas64_11.dll
+2021-05-14 14:56:42.418003: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cublasLt64_11.dll
+2021-05-14 14:56:42.423020: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cufft64_10.dll
+2021-05-14 14:56:42.426548: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library curand64_10.dll
+2021-05-14 14:56:42.429578: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'cusolver64_11.dll'; dlerror: cusolver6
+4_11.dll not found
+2021-05-14 14:56:42.455241: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cusparse64_11.dll
+2021-05-14 14:56:42.461883: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library cudnn64_8.dll
+2021-05-14 14:56:42.462083: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1766] Cannot dlopen some GPU libraries. Please make sure the missing libraries ment
+ioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the requ
+ired libraries for your platform.
+Skipping registering GPU devices...
+2021-05-14 14:56:42.463078: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneD
+NN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-05-14 14:56:42.463927: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-14 14:56:42.464031: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]
+2021-05-14 14:57:00.152933: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:345] Ignored output_format.
+2021-05-14 14:57:00.153085: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:348] Ignored drop_control_dependency.
+2021-05-14 14:57:00.153206: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:354] Ignored change_concat_input_ranges.
+2021-05-14 14:57:00.154222: I tensorflow/cc/saved_model/reader.cc:38] Reading SavedModel from: ./checkpoints/custom-416
+2021-05-14 14:57:00.184543: I tensorflow/cc/saved_model/reader.cc:90] Reading meta graph with tags { serve }
+2021-05-14 14:57:00.185514: I tensorflow/cc/saved_model/reader.cc:132] Reading SavedModel debug info (if present) from: ./checkpoints/custom-416
+2021-05-14 14:57:00.185768: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-14 14:57:00.185883: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]
+2021-05-14 14:57:00.314301: I tensorflow/cc/saved_model/loader.cc:206] Restoring SavedModel bundle.
+2021-05-14 14:57:00.547128: I tensorflow/cc/saved_model/loader.cc:190] Running initialization op on SavedModel bundle at path: ./checkpoints/custom-416
+2021-05-14 14:57:00.647184: I tensorflow/cc/saved_model/loader.cc:277] SavedModel load for tags { serve }; Status: success: OK. Took 492957 microseconds.
+2021-05-14 14:57:00.908670: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:210] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER
+_DIRECTORY` to enable.
+2021-05-14 14:57:02.036685: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1733] Found device 0 with properties:
+pciBusID: 0000:01:00.0 name: NVIDIA GeForce GTX 1650 Ti computeCapability: 7.5
+coreClock: 1.485GHz coreCount: 16 deviceMemorySize: 4.00GiB deviceMemoryBandwidth: 178.84GiB/s
+2021-05-14 14:57:02.036948: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1766] Cannot dlopen some GPU libraries. Please make sure the missing libraries ment
+ioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the requ
+ired libraries for your platform.
+Skipping registering GPU devices...
+2021-05-14 14:57:02.653948: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1258] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-14 14:57:02.654082: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1264]      0
+2021-05-14 14:57:02.654167: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1277] 0:   N
+2021-05-14 14:57:02.852337: W tensorflow/compiler/mlir/lite/flatbuffer_export.cc:1786] The following operation(s) need TFLite custom op implementation(s):
+Custom ops: AddV2, FusedBatchNormV3, Mul
+Details:
+        tf.AddV2 {device = ""}
+        tf.FusedBatchNormV3 {data_format = "NHWC", device = "", epsilon = 1.000000e-03 : f32, exponential_avg_factor = 1.000000e+00 : f32, is_training = false}
+        tf.Mul {device = ""}
+I0514 14:57:02.923850 20964 convert_tflite.py:50] model saved to: ./checkpoints/yolov4-416-fp32.tflite
+Traceback (most recent call last):
+  File "convert_tflite.py", line 78, in <module>
+    app.run(main)
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\absl\app.py", line 303, in run
+    _run_main(main, args)
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\absl\app.py", line 251, in _run_main
+    sys.exit(main(argv))
+  File "convert_tflite.py", line 74, in main
+    demo()
+  File "convert_tflite.py", line 54, in demo
+    interpreter.allocate_tensors()
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\lite\python\interpreter.py", line 408, in allocate_tensors
+    return self._interpreter.AllocateTensors()
+RuntimeError: Encountered unresolved custom op: ReadVariable.Node number 2 (ReadVariable) failed to prepare.
+
+
+(venv) C:\Users\newit\PycharmProjects\yolov4-custom-functions>
+

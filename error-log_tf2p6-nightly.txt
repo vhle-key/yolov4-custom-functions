@@ -1,0 +1,77 @@
+(venv) C:\Users\newit\PycharmProjects\yolov4-custom-functions>python convert_tflite.py --weights ./checkpoints/custom-416
+2021-05-14 15:07:01.752476: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneD
+NN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-05-14 15:07:02.872271: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1418] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 2145 MB memo
+ry:  -> device: 0, name: NVIDIA GeForce GTX 1650 Ti, pci bus id: 0000:01:00.0, compute capability: 7.5
+2021-05-14 15:07:21.350288: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:345] Ignored output_format.
+2021-05-14 15:07:21.350546: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:348] Ignored drop_control_dependency.
+2021-05-14 15:07:21.350987: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:354] Ignored change_concat_input_ranges.
+2021-05-14 15:07:21.352883: I tensorflow/cc/saved_model/reader.cc:38] Reading SavedModel from: ./checkpoints/custom-416
+2021-05-14 15:07:21.379495: I tensorflow/cc/saved_model/reader.cc:90] Reading meta graph with tags { serve }
+2021-05-14 15:07:21.379752: I tensorflow/cc/saved_model/reader.cc:132] Reading SavedModel debug info (if present) from: ./checkpoints/custom-416
+2021-05-14 15:07:21.496912: I tensorflow/cc/saved_model/loader.cc:206] Restoring SavedModel bundle.
+2021-05-14 15:07:21.735878: I tensorflow/cc/saved_model/loader.cc:190] Running initialization op on SavedModel bundle at path: ./checkpoints/custom-416
+2021-05-14 15:07:21.814837: I tensorflow/cc/saved_model/loader.cc:277] SavedModel load for tags { serve }; Status: success: OK. Took 461928 microseconds.
+2021-05-14 15:07:22.070570: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:210] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER
+_DIRECTORY` to enable.
+2021-05-14 15:07:22.438766: W tensorflow/compiler/mlir/lite/flatbuffer_export.cc:1830] The following operation(s) need TFLite custom op implementation(s):
+Custom ops: AddV2, FusedBatchNormV3, Mul
+Details:
+        tf.AddV2(tensor<?x13x13x3x2xf32>, tensor<?x13x13x3x2xf32>) -> (tensor<?x13x13x3x2xf32>) : {device = ""}
+        tf.AddV2(tensor<?x26x26x3x2xf32>, tensor<?x26x26x3x2xf32>) -> (tensor<?x26x26x3x2xf32>) : {device = ""}
+        tf.FusedBatchNormV3(tensor<?x104x104x32xf32>, tensor<32xf32>, tensor<32xf32>, tensor<32xf32>, tensor<32xf32>) -> (tensor<?x104x104x32xf32>, tensor<32xf32>
+, tensor<32xf32>, tensor<32xf32>, tensor<32xf32>, tensor<*xf32>) : {data_format = "NHWC", device = "", epsilon = 1.000000e-03 : f32, exponential_avg_factor = 1.00
+0000e+00 : f32, is_training = false}
+        tf.FusedBatchNormV3(tensor<?x104x104x64xf32>, tensor<64xf32>, tensor<64xf32>, tensor<64xf32>, tensor<64xf32>) -> (tensor<?x104x104x64xf32>, tensor<64xf32>
+, tensor<64xf32>, tensor<64xf32>, tensor<64xf32>, tensor<*xf32>) : {data_format = "NHWC", device = "", epsilon = 1.000000e-03 : f32, exponential_avg_factor = 1.00
+0000e+00 : f32, is_training = false}
+        tf.FusedBatchNormV3(tensor<?x13x13x128xf32>, tensor<128xf32>, tensor<128xf32>, tensor<128xf32>, tensor<128xf32>) -> (tensor<?x13x13x128xf32>, tensor<128xf
+32>, tensor<128xf32>, tensor<128xf32>, tensor<128xf32>, tensor<*xf32>) : {data_format = "NHWC", device = "", epsilon = 1.000000e-03 : f32, exponential_avg_factor
+= 1.000000e+00 : f32, is_training = false}
+        tf.FusedBatchNormV3(tensor<?x13x13x256xf32>, tensor<256xf32>, tensor<256xf32>, tensor<256xf32>, tensor<256xf32>) -> (tensor<?x13x13x256xf32>, tensor<256xf
+32>, tensor<256xf32>, tensor<256xf32>, tensor<256xf32>, tensor<*xf32>) : {data_format = "NHWC", device = "", epsilon = 1.000000e-03 : f32, exponential_avg_factor
+= 1.000000e+00 : f32, is_training = false}
+        tf.FusedBatchNormV3(tensor<?x13x13x512xf32>, tensor<512xf32>, tensor<512xf32>, tensor<512xf32>, tensor<512xf32>) -> (tensor<?x13x13x512xf32>, tensor<512xf
+32>, tensor<512xf32>, tensor<512xf32>, tensor<512xf32>, tensor<*xf32>) : {data_format = "NHWC", device = "", epsilon = 1.000000e-03 : f32, exponential_avg_factor
+= 1.000000e+00 : f32, is_training = false}
+        tf.FusedBatchNormV3(tensor<?x208x208x32xf32>, tensor<32xf32>, tensor<32xf32>, tensor<32xf32>, tensor<32xf32>) -> (tensor<?x208x208x32xf32>, tensor<32xf32>
+, tensor<32xf32>, tensor<32xf32>, tensor<32xf32>, tensor<*xf32>) : {data_format = "NHWC", device = "", epsilon = 1.000000e-03 : f32, exponential_avg_factor = 1.00
+0000e+00 : f32, is_training = false}
+        tf.FusedBatchNormV3(tensor<?x26x26x128xf32>, tensor<128xf32>, tensor<128xf32>, tensor<128xf32>, tensor<128xf32>) -> (tensor<?x26x26x128xf32>, tensor<128xf
+32>, tensor<128xf32>, tensor<128xf32>, tensor<128xf32>, tensor<*xf32>) : {data_format = "NHWC", device = "", epsilon = 1.000000e-03 : f32, exponential_avg_factor
+= 1.000000e+00 : f32, is_training = false}
+        tf.FusedBatchNormV3(tensor<?x26x26x256xf32>, tensor<256xf32>, tensor<256xf32>, tensor<256xf32>, tensor<256xf32>) -> (tensor<?x26x26x256xf32>, tensor<256xf
+32>, tensor<256xf32>, tensor<256xf32>, tensor<256xf32>, tensor<*xf32>) : {data_format = "NHWC", device = "", epsilon = 1.000000e-03 : f32, exponential_avg_factor
+= 1.000000e+00 : f32, is_training = false}
+        tf.FusedBatchNormV3(tensor<?x52x52x128xf32>, tensor<128xf32>, tensor<128xf32>, tensor<128xf32>, tensor<128xf32>) -> (tensor<?x52x52x128xf32>, tensor<128xf
+32>, tensor<128xf32>, tensor<128xf32>, tensor<128xf32>, tensor<*xf32>) : {data_format = "NHWC", device = "", epsilon = 1.000000e-03 : f32, exponential_avg_factor
+= 1.000000e+00 : f32, is_training = false}
+        tf.FusedBatchNormV3(tensor<?x52x52x64xf32>, tensor<64xf32>, tensor<64xf32>, tensor<64xf32>, tensor<64xf32>) -> (tensor<?x52x52x64xf32>, tensor<64xf32>, te
+nsor<64xf32>, tensor<64xf32>, tensor<64xf32>, tensor<*xf32>) : {data_format = "NHWC", device = "", epsilon = 1.000000e-03 : f32, exponential_avg_factor = 1.000000
+e+00 : f32, is_training = false}
+        tf.Mul(tensor<?x13x13x3x1xf32>, tensor<?x13x13x3x4xf32>) -> (tensor<?x13x13x3x4xf32>) : {device = ""}
+        tf.Mul(tensor<?x13x13x3x2xf32>, tensor<3x2xf32>) -> (tensor<?x13x13x3x2xf32>) : {device = ""}
+        tf.Mul(tensor<?x13x13x3x2xf32>, tensor<f32>) -> (tensor<?x13x13x3x2xf32>) : {device = ""}
+        tf.Mul(tensor<?x26x26x3x1xf32>, tensor<?x26x26x3x4xf32>) -> (tensor<?x26x26x3x4xf32>) : {device = ""}
+        tf.Mul(tensor<?x26x26x3x2xf32>, tensor<3x2xf32>) -> (tensor<?x26x26x3x2xf32>) : {device = ""}
+        tf.Mul(tensor<?x26x26x3x2xf32>, tensor<f32>) -> (tensor<?x26x26x3x2xf32>) : {device = ""}
+I0514 15:07:22.514535 13444 convert_tflite.py:50] model saved to: ./checkpoints/yolov4-416-fp32.tflite
+Traceback (most recent call last):
+  File "convert_tflite.py", line 78, in <module>
+    app.run(main)
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\absl\app.py", line 303, in run
+    _run_main(main, args)
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\absl\app.py", line 251, in _run_main
+    sys.exit(main(argv))
+  File "convert_tflite.py", line 74, in main
+    demo()
+  File "convert_tflite.py", line 54, in demo
+    interpreter.allocate_tensors()
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\lite\python\interpreter.py", line 423, in allocate_tensors
+    return self._interpreter.AllocateTensors()
+RuntimeError: Encountered unresolved custom op: ReadVariable.Node number 2 (ReadVariable) failed to prepare.
+
+
+(venv) C:\Users\newit\PycharmProjects\yolov4-custom-functions>
+

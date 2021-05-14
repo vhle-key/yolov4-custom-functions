@@ -1,0 +1,106 @@
+(venv) C:\Users\newit\PycharmProjects\yolov4-custom-functions>python convert_tflite.py --weights ./checkpoints/custom-416
+2021-05-14 14:51:24.184893: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cudart64_110.dll
+2021-05-14 14:51:26.441619: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-05-14 14:51:26.444598: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library nvcuda.dll
+2021-05-14 14:51:27.849786: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties:
+pciBusID: 0000:01:00.0 name: NVIDIA GeForce GTX 1650 Ti computeCapability: 7.5
+coreClock: 1.485GHz coreCount: 16 deviceMemorySize: 4.00GiB deviceMemoryBandwidth: 178.84GiB/s
+2021-05-14 14:51:27.850013: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cudart64_110.dll
+2021-05-14 14:51:27.928834: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cublas64_11.dll
+2021-05-14 14:51:27.929016: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cublasLt64_11.dll
+2021-05-14 14:51:27.933374: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cufft64_10.dll
+2021-05-14 14:51:27.935794: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library curand64_10.dll
+2021-05-14 14:51:27.975582: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cusolver64_10.dll
+2021-05-14 14:51:28.002512: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cusparse64_11.dll
+2021-05-14 14:51:28.009052: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cudnn64_8.dll
+2021-05-14 14:51:28.009247: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-05-14 14:51:28.010120: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneD
+NN) to use the following CPU instructions in performance-critical operations:  AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-05-14 14:51:28.011249: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties:
+pciBusID: 0000:01:00.0 name: NVIDIA GeForce GTX 1650 Ti computeCapability: 7.5
+coreClock: 1.485GHz coreCount: 16 deviceMemorySize: 4.00GiB deviceMemoryBandwidth: 178.84GiB/s
+2021-05-14 14:51:28.011435: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cudart64_110.dll
+2021-05-14 14:51:28.011560: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cublas64_11.dll
+2021-05-14 14:51:28.011660: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cublasLt64_11.dll
+2021-05-14 14:51:28.011727: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cufft64_10.dll
+2021-05-14 14:51:28.011787: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library curand64_10.dll
+2021-05-14 14:51:28.011856: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cusolver64_10.dll
+2021-05-14 14:51:28.011928: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cusparse64_11.dll
+2021-05-14 14:51:28.012132: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cudnn64_8.dll
+2021-05-14 14:51:28.012306: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-05-14 14:51:29.222562: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-14 14:51:29.222784: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0
+2021-05-14 14:51:29.222943: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N
+2021-05-14 14:51:29.223477: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with
+2903 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce GTX 1650 Ti, pci bus id: 0000:01:00.0, compute capability: 7.5)
+2021-05-14 14:51:29.225250: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-05-14 14:51:47.827903: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:316] Ignored output_format.
+2021-05-14 14:51:47.828129: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:319] Ignored drop_control_dependency.
+2021-05-14 14:51:47.828273: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:325] Ignored change_concat_input_ranges.
+2021-05-14 14:51:47.829503: I tensorflow/cc/saved_model/reader.cc:32] Reading SavedModel from: ./checkpoints/custom-416
+2021-05-14 14:51:47.858881: I tensorflow/cc/saved_model/reader.cc:55] Reading meta graph with tags { serve }
+2021-05-14 14:51:47.859067: I tensorflow/cc/saved_model/reader.cc:93] Reading SavedModel debug info (if present) from: ./checkpoints/custom-416
+2021-05-14 14:51:47.859405: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-14 14:51:47.859534: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]
+2021-05-14 14:51:47.859670: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-05-14 14:51:47.963359: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:196] None of the MLIR optimization passes are enabled (registered 0 passes)
+
+2021-05-14 14:51:47.976888: I tensorflow/cc/saved_model/loader.cc:206] Restoring SavedModel bundle.
+2021-05-14 14:51:48.205947: I tensorflow/cc/saved_model/loader.cc:190] Running initialization op on SavedModel bundle at path: ./checkpoints/custom-416
+2021-05-14 14:51:48.290535: I tensorflow/cc/saved_model/loader.cc:277] SavedModel load for tags { serve }; Status: success: OK. Took 461016 microseconds.
+2021-05-14 14:51:48.598390: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:194] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER
+_DIRECTORY` to enable.
+2021-05-14 14:51:48.807324: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties:
+pciBusID: 0000:01:00.0 name: NVIDIA GeForce GTX 1650 Ti computeCapability: 7.5
+coreClock: 1.485GHz coreCount: 16 deviceMemorySize: 4.00GiB deviceMemoryBandwidth: 178.84GiB/s
+2021-05-14 14:51:48.807491: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cudart64_110.dll
+2021-05-14 14:51:48.807827: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cublas64_11.dll
+2021-05-14 14:51:48.807945: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cublasLt64_11.dll
+2021-05-14 14:51:48.808065: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cufft64_10.dll
+2021-05-14 14:51:48.808183: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library curand64_10.dll
+2021-05-14 14:51:48.808303: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cusolver64_10.dll
+2021-05-14 14:51:48.808421: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cusparse64_11.dll
+2021-05-14 14:51:48.808535: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library cudnn64_8.dll
+2021-05-14 14:51:48.808691: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1862] Adding visible gpu devices: 0
+2021-05-14 14:51:48.808846: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-14 14:51:48.808958: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0
+2021-05-14 14:51:48.809071: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N
+2021-05-14 14:51:48.809268: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1406] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with
+2903 MB memory) -> physical GPU (device: 0, name: NVIDIA GeForce GTX 1650 Ti, pci bus id: 0000:01:00.0, compute capability: 7.5)
+2021-05-14 14:51:48.809414: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+loc("batch_normalization/moving_mean"): error: is not immutable, try running tf-saved-model-optimize-global-tensors to prove tensors are immutable
+Traceback (most recent call last):
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\lite\python\convert.py", line 210, in toco_convert_protos
+    model_str = wrap_toco.wrapped_toco_convert(model_flags_str,
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\lite\python\wrap_toco.py", line 32, in wrapped_toco_convert
+    return _pywrap_toco_api.TocoConvert(
+Exception: <unknown>:0: error: loc("batch_normalization/moving_mean"): is not immutable, try running tf-saved-model-optimize-global-tensors to prove tensors are i
+mmutable
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "convert_tflite.py", line 78, in <module>
+    app.run(main)
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\absl\app.py", line 303, in run
+    _run_main(main, args)
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\absl\app.py", line 251, in _run_main
+    sys.exit(main(argv))
+  File "convert_tflite.py", line 73, in main
+    save_tflite()
+  File "convert_tflite.py", line 47, in save_tflite
+    tflite_model = converter.convert()
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\lite\python\lite.py", line 739, in convert
+    result = _convert_saved_model(**converter_kwargs)
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\lite\python\convert.py", line 632, in convert_saved_model
+    data = toco_convert_protos(
+  File "C:\Users\newit\PycharmProjects\yolov4-custom-functions\venv\lib\site-packages\tensorflow\lite\python\convert.py", line 216, in toco_convert_protos
+    raise ConverterError(str(e))
+tensorflow.lite.python.convert.ConverterError: <unknown>:0: error: loc("batch_normalization/moving_mean"): is not immutable, try running tf-saved-model-optimize-g
+lobal-tensors to prove tensors are immutable
+
+
+(venv) C:\Users\newit\PycharmProjects\yolov4-custom-functions>
+
